@@ -1,0 +1,74 @@
+/**
+ * Rock Creek Composite — design tokens
+ * Inspired by outdoor retail: earthy, trustworthy, high contrast.
+ */
+:root {
+  /* Brand */
+  --color-forest: #2d4a3e;
+  --color-forest-dark: #1e3329;
+  --color-sage: #5c7a6a;
+  --color-rust: #c45c26;
+  --color-rust-dark: #9e4a1e;
+  --color-golden: #d4a574;
+
+  /* Neutrals */
+  --color-cream: #f7f5f0;
+  --color-stone: #e8e4dc;
+  --color-sand: #d4cfc4;
+  --color-charcoal: #1c2b2a;
+  --color-slate: #4a5c57;
+  --color-white: #ffffff;
+
+  /* Semantic */
+  --color-bg: var(--color-cream);
+  --color-bg-alt: var(--color-stone);
+  --color-surface: var(--color-white);
+  --color-text: var(--color-charcoal);
+  --color-text-muted: var(--color-slate);
+  --color-primary: var(--color-forest);
+  --color-primary-hover: var(--color-forest-dark);
+  --color-accent: var(--color-rust);
+  --color-accent-hover: var(--color-rust-dark);
+  --color-border: var(--color-sand);
+  --color-focus: var(--color-rust);
+
+  /* Typography */
+  --font-heading: "Outfit", system-ui, sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --text-xs: 0.875rem;
+  --text-sm: 1rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.5rem;
+  --text-4xl: 3.25rem;
+  --text-hero: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --section-pad: clamp(3rem, 6vw, 8.75rem);
+
+  /* Layout */
+  --container-max: 72.625rem;
+  --header-height: 5.75rem;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-pill: 999px;
+
+  /* Effects */
+  --shadow-sm: 0 2px 8px rgba(28, 43, 42, 0.08);
+  --shadow-md: 0 8px 24px rgba(28, 43, 42, 0.12);
+  --transition: 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition: 0s;
+  }
+}

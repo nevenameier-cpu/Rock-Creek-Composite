@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="2026 Oregon League event schedule for Rock Creek Composite. Plan your season and find official event dates and venues." />
+  <title>2026 Event Schedule | Rock Creek Composite</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo logo">Rock Creek<span>Composite · NICA</span></a>
+        <div class="header__navigation">
+          <nav class="menu__body" aria-label="Main navigation">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+              <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+              <li class="menu__item"><a href="coaches.html" class="menu__link">Coaches</a></li>
+              <li class="menu__item menu__item--dropdown">
+                <button type="button" class="menu__dropdown-toggle" id="nav-team-life">Team Life</button>
+                <ul class="menu__sublist" aria-labelledby="nav-team-life">
+                  <li><a href="schedule.html" class="menu__link" aria-current="page">Race Schedule</a></li>
+                  <li><a href="gallery.html" class="menu__link">Gallery</a></li>
+                </ul>
+              </li>
+            </ul>
+            <a href="register.html" class="actions-header__button">Join the Team</a>
+          </nav>
+          <div class="header__actions actions-header">
+            <button type="button" class="icon-menu" aria-label="Open menu"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page" id="main-content">
+      <section class="section section--page-top" aria-labelledby="events-heading">
+        <div class="services__container">
+          <header class="section__header">
+            <h2 class="title" id="events-heading">2026 Oregon League Events</h2>
+            <p class="lead">The Oregon League publishes the official event calendar. Dates, locations, conference schedules, and event details are updated there as information becomes available.</p>
+          </header>
+          <div class="schedule-table-wrap">
+            <table class="schedule-table">
+              <caption class="visually-hidden">2026 Oregon League event schedule</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Event</th>
+                  <th scope="col">Venue</th>
+                  <th scope="col">Notes</th>
+                </tr>
+              </thead>
+              <tbody id="schedule-tbody"></tbody>
+            </table>
+          </div>
+          <p class="schedule-note">
+            Event dates and locations can change. The
+            <a href="https://www.oregonmtb.org/eventweekends" rel="noopener noreferrer">Oregon League event calendar</a>
+            is the official source for current information.
+          </p>
+          <p style="text-align: center; margin-top: var(--space-lg);">
+            <a href="https://www.oregonmtb.org/eventweekends" class="button button--primary" rel="noopener noreferrer">View the official Oregon League schedule</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div>
+          <a href="index.html" class="footer__logo logo">Rock Creek<span>Composite</span></a>
+          <p class="footer__tagline">Youth mountain bike community in the Oregon League.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Explore</p>
+          <ul class="footer__list">
+            <li><a href="about.html" class="footer__link">About</a></li>
+            <li><a href="coaches.html" class="footer__link">Coaches</a></li>
+            <li><a href="schedule.html" class="footer__link">Event schedule</a></li>
+            <li><a href="gallery.html" class="footer__link">Gallery</a></li>
+            <li><a href="register.html" class="footer__link">Join the team</a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">© <span id="year"></span> Rock Creek Composite</p>
+          <p class="footer__nica">Oregon League · <a href="https://www.nationalmtb.org/" class="footer__link" rel="noopener noreferrer">NICA</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/events-data.js"></script>
+  <script src="js/schedule.js"></script>
+  <script src="js/script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join Rock Creek Composite. NICA registration steps for middle and high school student-athletes. No racing experience required." />
+  <title>Join the Team | Rock Creek Composite</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo logo">Rock Creek<span>Composite · NICA</span></a>
+        <div class="header__navigation">
+          <nav class="menu__body" aria-label="Main navigation">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+              <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+              <li class="menu__item"><a href="coaches.html" class="menu__link">Coaches</a></li>
+              <li class="menu__item menu__item--dropdown">
+                <button type="button" class="menu__dropdown-toggle" id="nav-team-life">Team Life</button>
+                <ul class="menu__sublist" aria-labelledby="nav-team-life">
+                  <li><a href="schedule.html" class="menu__link">Race Schedule</a></li>
+                  <li><a href="gallery.html" class="menu__link">Gallery</a></li>
+                </ul>
+              </li>
+            </ul>
+            <a href="register.html" class="actions-header__button" aria-current="page">Join the Team</a>
+          </nav>
+          <div class="header__actions actions-header">
+            <button type="button" class="icon-menu" aria-label="Open menu"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page" id="main-content">
+      <section class="page__main main main_pages main--register" aria-labelledby="page-title">
+        <div class="main__container">
+          <p class="main__caption">New riders welcome</p>
+          <h1 class="main__title" id="page-title">Join Rock Creek Composite</h1>
+          <p class="main__text">No racing experience required. Just bring a bike, a helmet, and a willingness to ride. Rock Creek Composite welcomes middle and high school student-athletes of all experience and ability levels. Whether your rider is brand new to mountain biking or already loves the trails, our coaches will help them build skills, confidence, and a love of riding.</p>
+        </div>
+      </section>
+
+      <section class="section section--alt" aria-labelledby="registration-heading">
+        <div class="services__container" style="max-width: 40rem; margin: 0 auto; text-align: center;">
+          <h2 class="title" id="registration-heading">Official registration</h2>
+          <p class="lead" style="margin: 0 auto var(--space-lg);">All student-athletes must complete registration through NICA before participating in team practices or Oregon League events.</p>
+          <a href="https://nationalmtb.org/" class="button button--primary" rel="noopener noreferrer">Register through NICA</a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="steps-heading">
+        <div class="services__container">
+          <header class="section__header">
+            <h2 class="title" id="steps-heading">Getting started is easy</h2>
+          </header>
+          <div class="steps">
+            <article class="step-card">
+              <h3>1. Create your NICA account</h3>
+              <p>Student-athletes and parents complete registration through NICA's registration system. Registration includes the required waivers, insurance, and league participation requirements.</p>
+            </article>
+            <article class="step-card">
+              <h3>2. Select Rock Creek Composite</h3>
+              <p>When prompted during registration, choose <strong>Rock Creek Composite</strong> as your team.</p>
+            </article>
+            <article class="step-card">
+              <h3>3. Connect with our coaches</h3>
+              <p>Once registration is complete, reach out to the coaching team and let us know about your rider's experience level. We'll help you understand what to expect at the first practice and make sure your rider is placed in the right group.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div>
+          <a href="index.html" class="footer__logo logo">Rock Creek<span>Composite</span></a>
+          <p class="footer__tagline">Youth mountain bike community in the Oregon League.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Explore</p>
+          <ul class="footer__list">
+            <li><a href="about.html" class="footer__link">About</a></li>
+            <li><a href="coaches.html" class="footer__link">Coaches</a></li>
+            <li><a href="schedule.html" class="footer__link">Event schedule</a></li>
+            <li><a href="gallery.html" class="footer__link">Gallery</a></li>
+            <li><a href="register.html" class="footer__link">Join the team</a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">© <span id="year"></span> Rock Creek Composite</p>
+          <p class="footer__nica">Oregon League · <a href="https://www.nationalmtb.org/" class="footer__link" rel="noopener noreferrer">NICA</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

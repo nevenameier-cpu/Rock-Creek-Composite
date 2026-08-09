@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rock Creek Composite events calendar — practices, races, team meetings, and volunteer days." />
+  <title>Events Calendar | Rock Creek Composite</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo logo">Rock Creek<span>Composite · NICA</span></a>
+        <div class="header__navigation">
+          <nav class="menu__body" aria-label="Main navigation">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+              <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+              <li class="menu__item"><a href="coaches.html" class="menu__link">Coaches</a></li>
+              <li class="menu__item menu__item--dropdown">
+                <button type="button" class="menu__dropdown-toggle" id="nav-team-life">Team Life</button>
+                <ul class="menu__sublist" aria-labelledby="nav-team-life">
+                  <li><a href="practice.html" class="menu__link">Practice</a></li>
+                  <li><a href="schedule.html" class="menu__link">Race Schedule</a></li>
+                  <li><a href="events.html" class="menu__link" aria-current="page">Events</a></li>
+                  <li><a href="gallery.html" class="menu__link">Gallery</a></li>
+                </ul>
+              </li>
+              <li class="menu__item"><a href="sponsors.html" class="menu__link">Sponsors</a></li>
+              <li class="menu__item"><a href="faq.html" class="menu__link">FAQ</a></li>
+              <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+            </ul>
+            <a href="register.html" class="actions-header__button">Join the Team</a>
+          </nav>
+          <div class="header__actions actions-header">
+            <button type="button" class="icon-menu" aria-label="Open menu"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page" id="main-content">
+      <section class="page__main main main_pages main--events" aria-labelledby="page-title">
+        <div class="main__container">
+          <p class="main__caption">Stay in the loop</p>
+          <h1 class="main__title" id="page-title">Events calendar</h1>
+          <p class="main__text">Practices, races, meetings, and team events—all in one place.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="calendar-heading">
+        <div class="services__container">
+          <header class="section__header">
+            <h2 class="title" id="calendar-heading">Team calendar</h2>
+            <p class="lead">Subscribe in Google Calendar to get updates on your phone.</p>
+          </header>
+
+          <div class="calendar-setup" role="note">
+            <p><strong>Coach setup:</strong> Replace the iframe <code>src</code> below with your Google Calendar embed URL.</p>
+            <ol style="margin: 0.75rem 0 0 1.25rem; line-height: 1.6;">
+              <li>Open Google Calendar → Settings → your team calendar</li>
+              <li>Under <em>Integrate calendar</em>, copy the embed code</li>
+              <li>Paste the <code>src</code> URL into <code>events.html</code> (search for <code>calendar.google.com</code>)</li>
+            </ol>
+          </div>
+
+          <div class="calendar-wrap">
+            <!-- COACH: Replace src with your embed URL from Google Calendar -->
+            <iframe
+              title="Rock Creek Composite team calendar"
+              src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FChicago"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="schedule-note">The calendar above shows a placeholder (US holidays) until you add your team calendar embed URL.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div>
+          <a href="index.html" class="footer__logo logo">Rock Creek<span>Composite</span></a>
+          <p class="footer__tagline">NICA youth mountain bike team. Ride together. Grow together.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Team</p>
+          <ul class="footer__list">
+            <li><a href="about.html" class="footer__link">About</a></li>
+            <li><a href="coaches.html" class="footer__link">Coaches</a></li>
+            <li><a href="register.html" class="footer__link">Join</a></li>
+            <li><a href="practice.html" class="footer__link">Practice</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Resources</p>
+          <ul class="footer__list">
+            <li><a href="schedule.html" class="footer__link">Race schedule</a></li>
+            <li><a href="events.html" class="footer__link">Events calendar</a></li>
+            <li><a href="gallery.html" class="footer__link">Gallery</a></li>
+            <li><a href="faq.html" class="footer__link">FAQ</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">© <span id="year"></span> Rock Creek Composite</p>
+          <p class="footer__nica">Member team · <a href="https://www.nationalmtb.org/" class="footer__link" rel="noopener noreferrer">NICA</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
