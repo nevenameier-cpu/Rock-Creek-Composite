@@ -35,4 +35,4 @@ Open http://127.0.0.1:8080
 2. **Settings → Pages →** branch `main`, folder **/ (root)**.
 3. Site URL: `https://<username>.github.io/<repo>/`
 
-Official rider registration: [nationalmtb.org](https://nationalmtb.org/)
+Official rider registration: [oregonmtb.org/find-a-team](https://www.oregonmtb.org/find-a-team)

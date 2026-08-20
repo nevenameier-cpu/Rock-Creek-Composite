@@ -1085,6 +1085,183 @@ body.menu-open {
   transition: transform 0.35s ease;
 }
 
+.lightbox__trigger {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+  font: inherit;
+  color: inherit;
+}
+
+.lightbox__trigger:hover img,
+.lightbox__trigger:focus-visible img {
+  transform: scale(1.03);
+}
+
+.lightbox__trigger:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.team-card__img .lightbox__trigger {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.about__image .lightbox__trigger {
+  cursor: zoom-in;
+}
+
+.about__image .lightbox__trigger img {
+  display: block;
+  width: 100%;
+}
+
+/* ========== Lightbox ========== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  background: rgba(28, 43, 42, 0.92);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox__dialog {
+  position: relative;
+  width: min(100%, 56rem);
+  max-height: calc(100vh - 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.lightbox__figure {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.lightbox__image {
+  max-width: 100%;
+  max-height: calc(100vh - 8rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+.lightbox__caption {
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  text-align: center;
+  max-width: 40rem;
+  line-height: 1.5;
+}
+
+.lightbox__counter {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.lightbox__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.lightbox__control:hover,
+.lightbox__control:focus-visible {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.lightbox__control:focus-visible {
+  outline: 3px solid var(--color-golden);
+  outline-offset: 2px;
+}
+
+.lightbox__control--prev {
+  left: -0.5rem;
+}
+
+.lightbox__control--next {
+  right: -0.5rem;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.lightbox__close:hover,
+.lightbox__close:focus-visible {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+@media (max-width: 48rem) {
+  .lightbox__control--prev {
+    left: 0.25rem;
+  }
+
+  .lightbox__control--next {
+    right: 0.25rem;
+  }
+
+  .lightbox__control {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery__item img {
+    transition: none;
+  }
+}
+
 .gallery__row--five {
   grid-template-columns: repeat(6, 1fr);
 }
