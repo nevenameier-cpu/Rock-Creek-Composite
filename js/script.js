@@ -133,7 +133,6 @@
       '<button type="button" class="lightbox__control lightbox__control--prev" aria-label="Previous photo">&#8249;</button>' +
       '<figure class="lightbox__figure">' +
       '<img class="lightbox__image" alt="" />' +
-      '<figcaption class="lightbox__caption"></figcaption>' +
       '<p class="lightbox__counter" aria-live="polite"></p>' +
       "</figure>" +
       '<button type="button" class="lightbox__control lightbox__control--next" aria-label="Next photo">&#8250;</button>' +
@@ -145,7 +144,6 @@
     var prevBtn = lightbox.querySelector(".lightbox__control--prev");
     var nextBtn = lightbox.querySelector(".lightbox__control--next");
     var imageEl = lightbox.querySelector(".lightbox__image");
-    var captionEl = lightbox.querySelector(".lightbox__caption");
     var counterEl = lightbox.querySelector(".lightbox__counter");
 
     var activeGallery = null;
@@ -163,8 +161,6 @@
 
       imageEl.src = slide.src;
       imageEl.alt = slide.alt;
-      captionEl.textContent = slide.alt;
-      captionEl.hidden = !slide.alt;
       counterEl.textContent = total > 1 ? (activeIndex + 1) + " / " + total : "";
 
       var showNav = total > 1;
